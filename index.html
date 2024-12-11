@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling untuk Hero Section */
+        .hero {
+            background-image: url('images/background.jpg'); /* Ganti dengan path gambar latar belakang yang sesuai */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Tinggi hero section mengikuti tinggi layar */
+            display: flex;
+            justify-content: center; /* Memposisikan konten di tengah secara horizontal */
+            align-items: center; /* Memposisikan konten di tengah secara vertikal */
+            text-align: center; /* Menjaga teks di tengah */
+            padding: 20px;
+            color: white; /* Warna teks putih agar kontras */
+        }
+
+        /* Styling untuk teks 'Selamat Datang' */
+        .hero h2 {
+            font-size: 4em; /* Ukuran font yang lebih besar */
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em; /* Ukuran font deskripsi */
+        }
+
+        /* Styling untuk tombol */
+        .btn-container {
+            display: flex; /* Menjadikan container tombol sebagai flexbox */
+            justify-content: center; /* Memposisikan tombol di tengah secara horizontal */
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 10px; /* Memberikan jarak antar tombol */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styling untuk tombol tambahan */
+        .btn-additional {
+            background-color: #28a745;
+        }
+
+        .btn-additional:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Metode Numerik</h1>
+            <nav>
+                <ul>
+                    <li><a href="#beranda"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang</h2>
+            <p>Jelajahi Hal Baru</p>
+
+            <!-- Tombol yang diarahkan ke halaman lain -->
+            <div class="btn-container">
+                <a href="posisi satelit.html" class="btn">Kalkulator Tekanan Atmosfer</a>
+                <!-- Tombol tambahan -->
+                <a href="penjelasan.html" class="btn btn-additional">Lihat ini</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="container">
+            <p>&copy; Keamanan Anda dijaga</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metode Euler dalam Penentuan Tekanan Atmosfer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .content {
+            font-size: 1.1em;
+        }
+        .code {
+            background-color: #f9f9f9;
+            border-left: 4px solid #007BFF;
+            padding: 10px;
+            margin: 20px 0;
+            font-family: "Courier New", Courier, monospace;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Metode Euler dalam Penentuan Tekanan Atmosfer</h1>
+</header>
+
+<section>
+    <h2>Apa Itu Metode Euler?</h2>
+    <div class="content">
+        <p>Metode Euler adalah salah satu teknik numerik yang digunakan untuk menyelesaikan persamaan diferensial biasa (ordinary differential equations, ODE). Ini adalah metode yang sederhana dan cukup efisien untuk memperoleh solusi perkiraan bagi masalah yang melibatkan perubahan dalam suatu sistem dari waktu ke waktu, seperti dalam dinamika fisika, ekologi, atau teknik.</p>
+        <p>Dalam metode Euler, kita mendekati solusi dari ODE dengan langkah-langkah kecil di sepanjang jalur solusi. Konsep dasarnya adalah untuk mendekati perubahan nilai suatu variabel (misalnya, posisi atau tekanan) dalam interval waktu yang kecil dengan menggunakan laju perubahan yang diketahui (turunan pertama) pada titik sebelumnya.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Langkah-langkah Dasar Metode Euler:</h2>
+    <div class="content">
+        <ol>
+            <li>Diberikan persamaan diferensial yang berbentuk <strong>dydt = f(t,y)</strong>, di mana <strong>y</strong> adalah variabel yang ingin kita temukan dan <strong>f(t,y)</strong> adalah fungsi yang menggambarkan laju perubahan <strong>y</strong> terhadap waktu <strong>t</strong>.</li>
+            <li>Tentukan nilai awal <strong>y₀</strong> pada waktu <strong>t₀</strong>.</li>
+            <li>Tentukan langkah waktu kecil <strong>Δt</strong>.</li>
+            <li>Gunakan rumus Euler: <br> <code>yₙ₊₁ = yₙ + f(tₙ, yₙ) * Δt</code></li>
+            <li>Ulangi langkah ini untuk setiap interval waktu.</li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <h2>Mengapa Metode Euler Bisa Digunakan untuk Menentukan Tekanan Atmosfer pada Ketinggian?</h2>
+    <div class="content">
+        <p>Tekanan atmosfer pada ketinggian berbeda dapat dihitung dengan menggunakan hukum fisika yang menghubungkan tekanan udara dengan ketinggian, yaitu persamaan hidrostatik atau persamaan barometrik.</p>
+        <p>Persamaan barometrik yang sederhana berbentuk seperti berikut:</p>
+        <div class="code">
+            <code>dP/dh = -ρg</code>
+        </div>
+        <p>Di mana:</p>
+        <ul>
+            <li><strong>P</strong> adalah tekanan udara</li>
+            <li><strong>h</strong> adalah ketinggian</li>
+            <li><strong>ρ</strong> adalah kerapatan udara (yang berubah dengan ketinggian)</li>
+            <li><strong>g</strong> adalah percepatan gravitasi</li>
+        </ul>
+        <p>Namun, karena kerapatan udara ρ dan faktor lainnya berubah secara non-linier dengan ketinggian, persamaan ini sering kali sulit untuk diselesaikan secara analitik. Di sinilah metode Euler bisa digunakan.</p>
+        <p>Dengan menggunakan metode Euler, kita bisa mendekati solusi numerik untuk persamaan ini dengan cara langkah demi langkah. Misalnya, kita tahu nilai awal tekanan <strong>P₀</strong> pada ketinggian <strong>h₀</strong> (misalnya, tekanan di permukaan laut), dan kita bisa menghitung perubahan tekanan pada interval ketinggian kecil <strong>Δh</strong>.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Langkah-langkah Perhitungan Tekanan Atmosfer Menggunakan Metode Euler</h2>
+    <div class="content">
+        <ol>
+            <li>Tentukan nilai awal tekanan <strong>P₀</strong> dan ketinggian <strong>h₀</strong>.</li>
+            <li>Tentukan langkah ketinggian <strong>Δh</strong>, misalnya 100 meter.</li>
+            <li>Gunakan persamaan turunan <strong>dP/dh</strong> untuk menghitung laju perubahan tekanan terhadap ketinggian.</li>
+            <li>Perbarui nilai tekanan pada langkah berikutnya menggunakan rumus Euler: <br> <code>Pₙ₊₁ = Pₙ + (dP/dh) * Δh</code></li>
+            <li>Ulangi perhitungan untuk setiap interval ketinggian hingga mencapai ketinggian yang diinginkan.</li>
+        </ol>
+    </div>
+</section>
+
+<section>
+    <h2>Keuntungan Menggunakan Metode Euler</h2>
+    <div class="content">
+        <ul>
+            <li><strong>Sederhana dan Efisien:</strong> Metode Euler sangat mudah diimplementasikan dan membutuhkan sedikit sumber daya komputasi.</li>
+            <li><strong>Solusi Numerik:</strong> Ini memungkinkan kita untuk menghitung solusi untuk persamaan yang sulit diselesaikan secara analitik, terutama ketika fungsi yang terlibat cukup kompleks.</li>
+            <li><strong>Pendekatan Langsung:</strong> Dengan menggunakan metode ini, kita bisa mendapatkan solusi cepat yang mendekati nilai nyata tanpa perlu formulasi rumit.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Kelemahan Metode Euler</h2>
+    <div class="content">
+        <p>Kelemahan utama metode Euler adalah akurasi yang terbatas, karena ia hanya menggunakan pendekatan linear berdasarkan perubahan pada langkah sebelumnya. Jika langkah waktu <strong>Δt</strong> terlalu besar, hasilnya bisa menjadi kurang akurat. Oleh karena itu, metode ini lebih baik digunakan dengan langkah yang cukup kecil untuk memastikan hasil yang lebih tepat.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Metode Euler dalam Penentuan Tekanan Atmosfer</p>
+</footer>
+
+</body>
+</html>

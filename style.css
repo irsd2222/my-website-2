@@ -1,0 +1,274 @@
+.hero {
+    background-image: url('images/background.jpg'); /* Path lokal ke gambar */
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    height: 100vh; /* Tinggi elemen sesuai tinggi layar */
+    width: 100%; /* Lebar elemen sesuai lebar layar */
+    display: flex; /* Untuk mengatur posisi konten */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Teks berwarna putih agar kontras */
+}
+
+
+
+/* Styling Header */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Background transparan untuk header */
+    padding: 10px 0;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Artikel Section */
+.articles {
+    margin: 40px 0;
+}
+
+.article-item {
+    margin-bottom: 20px;
+}
+
+.article-item h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.article-item h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333; /* Ganti warna latar belakang footer */
+    color: white; /* Warna teks footer */
+    text-align: center;
+    padding: 20px 0;
+}
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+    background-color: #000500;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #041b05;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+/* Animasi Fade-In untuk Hero Section */
+.hero-content {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Animasi Fade-In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi Fade-In untuk Footer */
+footer {
+    opacity: 0;
+    animation: fadeInFooter 2s forwards;
+}
+
+@keyframes fadeInFooter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Efek Hover pada tombol */
+.btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Membuat tombol sedikit membesar saat hover */
+}
+
+/* Efek Hover pada navigasi */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Menambahkan latar belakang gambar ke seluruh body */
+body {
+    background-image: url('images/background.jpg'); /* Path ke gambar latar belakang */
+    background-size: cover; /* Membuat gambar menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    font-family: Arial, sans-serif; /* Menjaga font tetap konsisten */
+    color: #333; /* Warna teks default */
+}
+
+/* Atur agar header lebih menonjol */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Transparansi agar gambar tetap terlihat */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menambahkan padding dan pengaturan untuk form */
+form {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparansi putih di form */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Menambahkan style untuk tombol */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
